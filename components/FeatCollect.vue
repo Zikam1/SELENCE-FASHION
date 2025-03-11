@@ -23,8 +23,8 @@
 
 <script setup>
 const collections = [
-  { title: "Women's Collection", image: "/images/gh.jpg" }, // Image in public folder
-  { title: "Men's Collection", image: "/images/xs.jpg" },     // Image in public folder
-  { title: "Kids' Collection", image: "/images/wer.jpg" }  ,   // Image in public folder
+  { title: "Women's Collection", image: "/images/gh.jpg" }, 
+  { title: "Men's Collection", image: "/images/xs.jpg" },     
+  { title: "Kids' Collection", image: "/images/wer.jpg" }  ,   
 ];
 </script>

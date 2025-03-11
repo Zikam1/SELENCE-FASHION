@@ -1,18 +1,18 @@
 <template>
   <div class="bg-gray-100 min-h-[60vh] flex items-center justify-center py-12">
     <div class="container mx-auto px-6 md:px-12 lg:px-20">
-      <div class="flex flex-col md:flex-row items-center gap-8 p-6 md:p-10">
+      <div class="flex flex-col md:flex-row items-stretch gap-8 p-6 md:p-10">
         <!-- Image Section -->
-        <div class="w-full md:w-1/2 flex justify-center">
+        <div class="w-full md:w-1/2 flex justify-center items-center">
           <img
             src="@/assets/clo.jpg"
             alt="Luxury Fashion"
-            class="w-full max-w-md h-auto rounded-xl shadow-xl object-cover"
+            class="w-full max-w-md h-full md:h-[500px] rounded-xl shadow-xl object-cover"
           />
         </div>
 
         <!-- Text Content -->
-        <div class="w-full md:w-1/2 text-center lg:text-left">
+        <div class="w-full md:w-1/2 flex flex-col justify-center text-center lg:text-left">
           <div class="text-gray-800">
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Revolutionizing African Fast Fashion
@@ -28,9 +28,9 @@
             </p>
             <!-- Call-to-Action Button -->
             <div class="flex justify-center lg:justify-start">
-              <button class="px-8 py-3 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition">
+              <!-- <button class="px-8 py-3 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition">
                 Join the Waiting List
-              </button>
+              </button> -->
             </div>
           </div>
         </div>

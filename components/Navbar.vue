@@ -1,13 +1,13 @@
 <template>
-  <header class="bg-white shadow-md font-serif">
+  <header class="shadow-md font-serif relative">
     <div class="max-w-6xl mx-auto flex justify-between items-center py-4 px-6">
       <!-- Logo Section -->
       <div class="flex items-center">
         <img src="../assets/yu.png" alt="Selense African Fast-Fashion"
-          class="h-64 w-auto object-contain md:h-20 lg:h-24 transition-transform duration-300 hover:scale-105" />
+          class="h-32 w-auto object-contain md:h-20 lg:h-24 transition-transform duration-300 hover:scale-105" />
       </div>
 
-      <!-- Navigation Links -->
+      <!-- Navigation Links (Desktop) -->
       <nav class="hidden md:flex space-x-6">
         <a href="#" class="text-gray-700 hover:text-blue-600 text-base font-medium transition">Shop</a>
         <a href="#" class="text-gray-700 hover:text-blue-600 text-base font-medium transition">Collections</a>
@@ -15,8 +15,31 @@
         <a href="#" class="text-gray-700 hover:text-blue-600 text-base font-medium transition">Sale</a>
       </nav>
 
-      <!-- Icons (Search, Cart, User) -->
+      <!-- Icons and Mobile Menu Button -->
       <div class="flex items-center space-x-4">
+        <!-- Icons (Hidden on Mobile) -->
+        <div class="hidden md:flex space-x-4">
+          <button class="text-gray-700 hover:text-blue-600 text-lg transition"><span>🔍</span></button>
+          <button class="text-gray-700 hover:text-blue-600 text-lg transition"><span>🛒</span></button>
+          <button class="text-gray-700 hover:text-blue-600 text-lg transition"><span>👤</span></button>
+        </div>
+
+        <!-- Mobile Menu Button (Right-Aligned) -->
+        <button @click="isMenuOpen = !isMenuOpen" class="md:hidden text-gray-700 text-2xl focus:outline-none ml-auto">
+          ☰
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div v-if="isMenuOpen" class="md:hidden bg-white shadow-md p-4 w-full absolute left-0 top-full transition-all duration-300">
+      <nav class="flex flex-col space-y-4">
+        <a href="#" class="text-gray-700 hover:text-blue-600 text-base font-medium transition">Shop</a>
+        <a href="#" class="text-gray-700 hover:text-blue-600 text-base font-medium transition">Collections</a>
+        <a href="#" class="text-gray-700 hover:text-blue-600 text-base font-medium transition">New Arrivals</a>
+        <a href="#" class="text-gray-700 hover:text-blue-600 text-base font-medium transition">Sale</a>
+      </nav>
+      <div class="flex justify-end space-x-6 mt-4">
         <button class="text-gray-700 hover:text-blue-600 text-lg transition"><span>🔍</span></button>
         <button class="text-gray-700 hover:text-blue-600 text-lg transition"><span>🛒</span></button>
         <button class="text-gray-700 hover:text-blue-600 text-lg transition"><span>👤</span></button>
@@ -24,3 +47,54 @@
     </div>
   </header>
 </template>
+
+<script setup>
+import { ref } from 'vue';
+const isMenuOpen = ref(false);
+</script>
+<template>
+  <header class="shadow-md font-serif w-full">
+    <div class="max-w-6xl mx-auto flex justify-between items-center py-4 px-6 relative">
+      <!-- Logo Section -->
+      <div class="flex items-center">
+        <img src="../assets/yu.png" alt="Selense African Fast-Fashion"
+          class="h-32 w-auto object-contain md:h-20 lg:h-24 transition-transform duration-300 hover:scale-105" />
+      </div>
+
+      <!-- Navigation Links (Desktop) -->
+      <nav class="hidden md:flex space-x-6">
+        <a href="#" class="text-gray-700 hover:text-blue-600 text-base font-medium transition">Shop</a>
+        <a href="#" class="text-gray-700 hover:text-blue-600 text-base font-medium transition">Collections</a>
+        <a href="#" class="text-gray-700 hover:text-blue-600 text-base font-medium transition">New Arrivals</a>
+        <a href="#" class="text-gray-700 hover:text-blue-600 text-base font-medium transition">Sale</a>
+      </nav>
+
+      <!-- Icons and Mobile Menu Button -->
+      <div class="flex items-center space-x-4 md:hidden">
+        <button @click="isMenuOpen = !isMenuOpen" class="text-gray-700 text-2xl focus:outline-none ml-auto">
+          ☰
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div v-if="isMenuOpen" class="md:hidden w-full bg-white shadow-md p-4 flex flex-col items-start space-y-4 transition-all duration-300">
+      <nav class="w-full flex flex-col space-y-4">
+        <a href="#" class="text-gray-700 hover:text-blue-600 text-base font-medium transition">Shop</a>
+        <a href="#" class="text-gray-700 hover:text-blue-600 text-base font-medium transition">Collections</a>
+        <a href="#" class="text-gray-700 hover:text-blue-600 text-base font-medium transition">New Arrivals</a>
+        <a href="#" class="text-gray-700 hover:text-blue-600 text-base font-medium transition">Sale</a>
+      </nav>
+      <div class="flex justify-end w-full space-x-6 mt-4">
+        <button class="text-gray-700 hover:text-blue-600 text-lg transition"><span>🔍</span></button>
+        <button class="text-gray-700 hover:text-blue-600 text-lg transition"><span>🛒</span></button>
+        <button class="text-gray-700 hover:text-blue-600 text-lg transition"><span>👤</span></button>
+      </div>
+    </div>
+  </header>
+</template>
+
+<script setup>
+import { ref } from 'vue';
+const isMenuOpen = ref(false);
+</script>

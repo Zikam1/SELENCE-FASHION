@@ -1,27 +1,17 @@
 <template>
-  <footer class="bg-gray-900 text-white py-8">
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div>
-          <h3 class="text-xl font-bold mb-4">Selense Africa</h3>
-          <p class="text-gray-400">Celebrating African fashion and creativity.</p>
-        </div>
-        <div>
-          <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
-          <ul class="space-y-2">
-            <li><a href="/shop" class="text-gray-400 hover:text-white">Shop</a></li>
-            <li><a href="/designers" class="text-gray-400 hover:text-white">Designers</a></li>
-            <li><a href="/contact" class="text-gray-400 hover:text-white">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="text-lg font-semibold mb-4">Newsletter</h4>
-          <form class="flex">
-            <input type="email" placeholder="Your email" class="w-full px-4 py-2 rounded-l-full bg-gray-800 text-white" />
-            <button type="submit" class="bg-black px-6 py-2 rounded-r-full hover:bg-gray-800">Subscribe</button>
-          </form>
-        </div>
-      </div>
+<section class="py-16 bg-indigo-600 text-white">
+  
+  <div class="container mx-auto text-center px-6">
+    <h2 class="text-3xl md:text-4xl font-bold">Join Our Fashion Community</h2>
+    <p class="mt-4 text-lg">Sign up for exclusive updates, new arrivals, and special discounts.</p>
+    <div class="mt-6 flex flex-col md:flex-row justify-center gap-4">
+      <input type="email" placeholder="Enter your email"
+        class="w-full md:w-1/3 px-4 py-3 rounded-lg text-gray-900 focus:outline-none">
+      <button class="px-6 py-3 bg-white text-indigo-600 font-semibold rounded-lg hover:bg-gray-200 transition">
+        Subscribe
+      </button>
     </div>
-  </footer>
+  </div>
+ 
+</section>
 </template>

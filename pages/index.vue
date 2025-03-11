@@ -2,6 +2,7 @@
     <div>
       <Home />
       <FeatCollect />
+      <offer />
     </div>
   </template>
   

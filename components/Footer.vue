@@ -46,9 +46,9 @@
         <!-- Contact Info -->
         <div>
           <h3 class="text-xl font-bold mb-4">Contact Us</h3>
-          <p class="text-gray-400 mb-2">567, Clinton Selense, U.k</p>
+          <!-- <p class="text-gray-400 mb-2">567, Clinton Selense, U.k</p> -->
           <p class="text-gray-400 mb-2">Email:  info@selense.co.uk</p>
-          <p class="text-gray-400">Phone: +1 234 567 890</p>
+          <!-- <p class="text-gray-400">Phone: +1 234 567 890</p> -->
         </div>
       </div>
 

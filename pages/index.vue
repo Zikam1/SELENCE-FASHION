@@ -3,6 +3,9 @@
       <Home />
       <FeatCollect />
       <offer />
+      <Testimonials />
+      <FasihionDesign />
+      <About />
     </div>
   </template>
   

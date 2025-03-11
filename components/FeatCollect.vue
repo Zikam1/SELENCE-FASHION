@@ -1,23 +1,20 @@
 <template>
-  <div class="max-w-7xl mx-auto py-20 px-6">
+  <div class="max-w-7xl mx-auto py-10 px-4 pb-24">
     <!-- Featured Collections -->
-    <h2 class="text-4xl font-extrabold text-gray-900 mb-12 text-center">Featured Collections</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-      <div v-for="(collection, index) in collections" :key="index" class="relative group overflow-hidden rounded-lg shadow-lg">
-        <img :src="collection.image" :alt="collection.title" class="w-full h-96 object-cover transition-transform duration-500 group-hover:scale-110" />
-        <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-transparent flex items-end p-6 transition-opacity duration-300 group-hover:opacity-80">
-          <h3 class="text-2xl font-bold text-white">{{ collection.title }}</h3>
-        </div>
-      </div>
-    </div>
-
-    <!-- Testimonials -->
-    <div class="mt-24">
-      <h2 class="text-4xl font-extrabold text-gray-900 mb-12 text-center">What Our Customers Say</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div v-for="(testimonial, index) in testimonials" :key="index" class="bg-white p-8 rounded-xl shadow-xl border border-gray-200 hover:shadow-2xl transition-all">
-          <p class="text-gray-700 italic mb-6">"{{ testimonial.feedback }}"</p>
-          <p class="font-semibold text-gray-900 text-right">- {{ testimonial.name }}</p>
+    <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Featured Collections</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div
+        v-for="(collection, index) in collections"
+        :key="index"
+        class="relative group overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-shadow"
+      >
+        <img
+          :src="collection.image"
+          :alt="collection.title"
+          class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+        />
+        <div class="absolute inset-0 bg-black/30 flex items-end p-4 transition-opacity duration-300 group-hover:opacity-90">
+          <h3 class="text-xl font-semibold text-white">{{ collection.title }}</h3>
         </div>
       </div>
     </div>
@@ -26,14 +23,8 @@
 
 <script setup>
 const collections = [
-  { title: "Women's Collection", image: "..assets/wms.jpg" },
-  { title: "Men's Collection", image: "..assets/wms.jpg" },
-  { title: "Kids' Collection", image: "/wms.jpg" }
-];
-
-const testimonials = [
-  { name: "Sarah M.", feedback: "I love the quality and style of the clothes. Highly recommended!" },
-  { name: "John D.", feedback: "Fast delivery and great customer service. Will shop again!" },
-  { name: "Emily R.", feedback: "The best place to find trendy fashion at affordable prices." }
+  { title: "Women's Collection", image: "/images/gh.jpg" }, // Image in public folder
+  { title: "Men's Collection", image: "/images/xs.jpg" },     // Image in public folder
+  { title: "Kids' Collection", image: "/images/wer.jpg" }  ,   // Image in public folder
 ];
 </script>

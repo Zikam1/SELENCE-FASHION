@@ -12,40 +12,11 @@
         <a href="#" class="text-gray-700 hover:text-blue-600 text-base font-medium transition">Shop</a>
         <a href="#" class="text-gray-700 hover:text-blue-600 text-base font-medium transition">Collections</a>
         <a href="#" class="text-gray-700 hover:text-blue-600 text-base font-medium transition">New Arrivals</a>
-        <a href="#" class="text-gray-700 hover:text-blue-600 text-base font-medium transition">Sale</a>
+        <a href="#" class="text-gray-700 hover:text-blue-600 text-base font-medium transition">Sales</a>
       </nav>
 
-      <!-- Icons and Mobile Menu Button -->
-      <div class="flex items-center space-x-4">
-        <!-- Icons (Hidden on Mobile) -->
-        <div class="hidden md:flex space-x-4">
-          <button class="text-gray-700 hover:text-blue-600 text-lg transition">
-            <SalesIcon />
-          </button>
-          <button class="text-gray-700 hover:text-blue-600 text-lg transition">
-            <Search />
-          </button>
-          <button class="text-gray-700 hover:text-blue-600 text-lg transition">
-            <Shopping />
-          </button>
-        </div>
-
-      
-        <button @click="isMenuOpen = !isMenuOpen" class="md:hidden text-gray-700 text-2xl focus:outline-none ml-auto">
-          ☰
-        </button>
-      </div>
-    </div>
-
-   
-    <div v-if="isMenuOpen" class="md:hidden bg-white shadow-md p-4 w-full absolute left-0 top-full transition-all duration-300">
-      <nav class="flex flex-col space-y-4">
-        <a href="#" class="text-gray-700 hover:text-blue-600 text-base font-medium transition">Shop</a>
-        <a href="#" class="text-gray-700 hover:text-blue-600 text-base font-medium transition">Collections</a>
-        <a href="#" class="text-gray-700 hover:text-blue-600 text-base font-medium transition">New Arrivals</a>
-        <a href="#" class="text-gray-700 hover:text-blue-600 text-base font-medium transition">Sale</a>
-      </nav>
-      <div class="flex justify-end space-x-6 mt-4">
+      <!-- Desktop Icons -->
+      <div class="hidden md:flex items-center space-x-4">
         <button class="text-gray-700 hover:text-blue-600 text-lg transition">
           <SalesIcon />
         </button>
@@ -56,12 +27,30 @@
           <Shopping />
         </button>
       </div>
+
+      <!-- Mobile Menu Button -->
+      <button @click="isMenuOpen = !isMenuOpen" class="md:hidden text-gray-700 text-2xl focus:outline-none ml-auto">
+        ☰
+      </button>
+    </div>
+
+    <!-- Mobile Menu (Push Content Down) -->
+    <div v-if="isMenuOpen" class="md:hidden  bg-opacity-20 shadow-md p-4 w-full transition-all duration-300 z-10">
+      <nav class="flex flex-col space-y-4">
+        <a href="#" class="text-gray-700 hover:text-blue-600 text-base font-medium transition">Shop</a>
+        <a href="#" class="text-gray-700 hover:text-blue-600 text-base font-medium transition">Collections</a>
+        <a href="#" class="text-gray-700 hover:text-blue-600 text-base font-medium transition">New Arrivals</a>
+        <a href="#" class="text-gray-700 hover:text-blue-600 text-base font-medium transition">Sales</a>
+      </nav>
     </div>
   </header>
 </template>
 
 <script setup>
+import { ref } from 'vue'
 import SalesIcon from '@/components/icons/sales.vue';
 import Search from '@/components/icons/search.vue';
 import Shopping from '@/components/icons/shopping.vue';
+
+const isMenuOpen = ref(false);
 </script>

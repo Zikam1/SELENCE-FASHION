@@ -5,7 +5,7 @@
     <div class="relative z-10 text-center px-4 sm:px-6 md:px-12 flex flex-col items-center justify-center">
       <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight">
         Elevate Your Style with  
-        <span class="text-indigo-600">Fashion</span>
+        <span class="text-white">Fashion</span>
       </h1>
       <p class="mt-4 text-base sm:text-lg md:text-xl max-w-2xl mx-auto">
         Discover exclusive fashion collections crafted to redefine elegance.

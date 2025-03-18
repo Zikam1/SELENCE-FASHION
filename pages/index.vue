@@ -6,6 +6,7 @@
       <Testimonials />
       <FasihionDesign />
       <About />
+      <Waitlist />
     </div>
   </template>
   

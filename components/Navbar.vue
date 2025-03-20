@@ -3,7 +3,7 @@
     <div class="max-w-6xl mx-auto flex justify-between items-center py-4 px-6">
       <!-- Logo Section -->
       <div class="flex items-center">
-        <img src="../assets/yu.png" alt="Selense African Fast-Fashion"
+        <img src="../assets/seilogo.png" alt="Selense African Fast-Fashion"
           class="h-32 w-auto object-contain md:h-20 lg:h-24 transition-transform duration-300 hover:scale-105" />
       </div>
 

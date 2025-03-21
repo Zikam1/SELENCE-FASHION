@@ -10,7 +10,7 @@
           @click="redirectToGoogleForm"
           class="w-full py-3 px-4 bg-indigo-600 text-white font-semibold rounded-md hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-300"
         >
-          Go to Google Form
+          Join the waitlist
         </button>
       </div>
 

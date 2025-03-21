@@ -5,14 +5,13 @@
       <!-- Left Content -->
       <div class="flex-1 flex flex-col justify-center text-center md:text-left">
         <h2 class="text-4xl font-bold mb-4 text-gray-800">Want to Join the Waitlist?</h2>
-        <p class="text-gray-600 mb-6">Be the first to know when we launch. </p>
-          <button
-            type="submit"
-            class="w-full py-3 px-4 bg-indigo-600 text-white font-semibold rounded-md hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-300"
-          >
-            Go to Google Form
-          </button>
-        <!-- </form> -->
+        <p class="text-gray-600 mb-6">Be the first to know when we launch.</p>
+        <button
+          @click="redirectToGoogleForm"
+          class="w-full py-3 px-4 bg-indigo-600 text-white font-semibold rounded-md hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-300"
+        >
+          Go to Google Form
+        </button>
       </div>
 
       <!-- Right Image -->
@@ -29,13 +28,8 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-
-const email = ref('')
-
-// This will redirect the user to the Google Form when they click submit
 const redirectToGoogleForm = () => {
-  const formUrl = 'https://docs.google.com/forms/d/1MVkPgujjcCKfvgSramwpx9sOWIiOwhAFi6_2lBLxGlw/'
-  window.open(formUrl, '_blank') // or use '_self' if you want it in same tab
+  const formUrl = 'https://docs.google.com/forms/d/1MVkPgujjcCKfvgSramwpx9sOWIiOwhAFi6_2lBLxGlw/viewform';
+  window.open(formUrl, '_blank'); // opens in a new tab
 }
 </script>

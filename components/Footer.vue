@@ -54,7 +54,7 @@
 
       <!-- Divider -->
       <div class="border-t border-gray-800 mt-12 pt-8 text-center">
-        <p class="text-gray-400">&copy; 2023 SelenseAfricaFastFashion. All rights reserved.</p>
+        <p class="text-gray-400">&copy; 2025 SelenseAfricaFastFashion. All rights reserved.</p>
         <p class="text-gray-400 mt-2">Designed with <span class="text-indigo-500">❤️</span> by Selense Team</p>
       </div>
     </div>
